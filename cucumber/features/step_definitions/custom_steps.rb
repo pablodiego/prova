@@ -39,7 +39,15 @@ Then(/^should not be created a subtask$/) do
 	step %[Then should not be created a subtask]
 end
 
-def pablo 
+Given(/^I enter a subtasks as "(.*?)"$/) do |subtask|
+  tep %[I enter "#{subtask}" into input field having id "new_sub_task"]
+end
 
+Given(/^I enter a date as "(.*?)"$/) do |date|
+  tep %[I enter "#{date}" into input field having id "dueDate"]
+end
+
+Then(/^I should not see the task created$/) do
+  pending # express the regexp above with the code you wish you had
 end
 
